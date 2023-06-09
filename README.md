@@ -6,5 +6,3 @@
 4. `sail up -d`
 5. `sail composer require laravel/breeze --dev`
 6. `sail npm run dev`
-
-[これ](https://github.com/YutakaOkabe/laravel10-test/pull/1)と同じセグフォが起こるのでDocker Desktopの4.18.0が必要
