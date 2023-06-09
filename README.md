@@ -4,5 +4,4 @@
 2. プロジェクト名変更
 3. .envの内容調整
 4. `sail up -d`
-5. `sail composer require laravel/breeze --dev`
-6. `sail npm run dev`
+5. `sail npm run dev`
