@@ -24,7 +24,7 @@ Route::domain(config('app.domain'))
             ->group(function () {
                 Route::get('/', function () {
                     return view('welcome');
-                });
+                })->name('welcome');
                 Route::name('users.')
                     ->prefix('users')
                     ->controller(UsersController::class)
@@ -40,7 +40,7 @@ Route::domain('hoge.' . config('app.domain'))
     ->group(function () {
         Route::get('/', function () {
             return view('welcome-hoge');
-        });
+        })->name('welcome');
         Route::middleware('auth')->group(function () {
             Route::name('users.')
                 ->prefix('users')
@@ -48,6 +48,9 @@ Route::domain('hoge.' . config('app.domain'))
                 ->group(function () {
                     Route::get('/', 'index')->name('index');
                 });
+            Route::get('/dashboard', function () {
+                return view('dashboard');
+            });
         });
     });
 
@@ -57,7 +60,7 @@ Route::domain('fuga.' . config('app.domain'))
     ->group(function () {
         Route::get('/', function () {
             return view('welcome-fuga');
-        });
+        })->name('welcome');
         Route::name('users.')
             ->prefix('users')
             ->controller(FugaUsersController::class)
