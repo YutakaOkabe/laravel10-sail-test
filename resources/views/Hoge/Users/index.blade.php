@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-hoge-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('User') }}
+        </h2>
+    </x-slot>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
                     <div>hoge</div>
-                    @foreach($users as $key => $user)
+                    @foreach ($users as $key => $user)
                         {{ $user->name }}<br>
                         {{ $user->email }}<br>
                     @endforeach
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</x-hoge-layout>

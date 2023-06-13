@@ -66,6 +66,16 @@ Route::domain('fuga.' . config('app.domain'))
             });
     });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+Route::middleware('')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
