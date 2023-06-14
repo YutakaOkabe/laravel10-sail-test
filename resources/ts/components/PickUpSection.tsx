@@ -1,4 +1,10 @@
-const PickUpItem = ({ image }) => {
+import React from "react";
+
+type ItemProps = {
+    image: string;
+}
+
+const PickUpItem = ({ image }: ItemProps) => {
   return (
     <div className="w-full h-full">
       <img src={image} alt="" className="object-cover w-full h-full rounded" />
@@ -6,7 +12,15 @@ const PickUpItem = ({ image }) => {
   );
 };
 
-export const PickUpSection = ({ title, items }) => {
+type itemObj = {
+    image: string;
+}
+type SectionProps = {
+    title: string;
+    items: itemObj[];
+}
+
+export const PickUpSection = ({ title, items }:SectionProps) => {
   return (
     <div className="w-1/2 p-4">
       <h1 className="text-2xl font-bold mb-4">{title}</h1>

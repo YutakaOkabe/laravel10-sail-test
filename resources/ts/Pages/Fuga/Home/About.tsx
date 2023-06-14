@@ -7,11 +7,12 @@ export default function ({ users }) {
         console.log(user)
     })
 
-    let pickUpTopics = [];
-    let pickUpEvents = [];
+    type itemObj = {
+        image: string;
+    }
+    let pickUpTopics:itemObj[] = [];
     for (let i = 0; i < 15; i++) {
         pickUpTopics.push({ image: 'https://s3-ap-northeast-1.amazonaws.com/storage.shukatsu-ichiba.com/media/2019/10/%E3%82%A2%E3%82%A412933_720x550.png' });
-        pickUpEvents.push({ image: 'https://s3-ap-northeast-1.amazonaws.com/storage.shukatsu-ichiba.com/media/2019/10/%E3%82%A2%E3%82%A412933_720x550.png' });
     }
 
     return (
@@ -20,7 +21,6 @@ export default function ({ users }) {
             <main className="container mx-auto px-4 py-8">
                 <div className="flex">
                     <PickUpSection title="PICK UP TOPICS" items={pickUpTopics} />
-                    <PickUpSection title="PICK UP EVENT" items={pickUpEvents} />
                 </div>
             </main>
             <footer className="bg-gray-100 py-4 mt-8">
