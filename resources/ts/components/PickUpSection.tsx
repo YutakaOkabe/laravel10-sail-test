@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 type ItemProps = {
-    image: string;
-}
+  image: string;
+};
 
 const PickUpItem = ({ image }: ItemProps) => {
   return (
@@ -13,14 +13,14 @@ const PickUpItem = ({ image }: ItemProps) => {
 };
 
 type itemObj = {
-    image: string;
-}
+  image: string;
+};
 type SectionProps = {
-    title: string;
-    items: itemObj[];
-}
+  title: string;
+  items: itemObj[];
+};
 
-export const PickUpSection = ({ title, items }:SectionProps) => {
+export const PickUpSection = ({ title, items }: SectionProps) => {
   return (
     <div className="w-1/2 p-4">
       <h1 className="text-2xl font-bold mb-4">{title}</h1>
