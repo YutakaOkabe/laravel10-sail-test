@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Hoge\UsersController as HogeUsersController;
-use App\Http\Controllers\Fuga\UsersController as FugaUsersController;
+use App\Http\Controllers\Fuga\HomeController as FugaHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,11 +58,12 @@ Route::domain('fuga.' . config('app.domain'))
         Route::get('/', function () {
             return view('welcome-fuga');
         });
-        Route::name('users.')
-            ->prefix('users')
-            ->controller(FugaUsersController::class)
+        Route::name('home.')
+            ->prefix('home')
+            ->controller(FugaHomeController::class)
             ->group(function () {
                 Route::get('/', 'index')->name('index');
+                Route::get('/about', 'about')->name('about');
             });
     });
 

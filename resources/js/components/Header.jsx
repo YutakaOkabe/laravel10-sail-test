@@ -1,0 +1,36 @@
+import { Link } from '@inertiajs/react';
+
+export const Header = () => {
+    return (
+        <header className="py-4 bg-white shadow">
+            <nav className="container mx-auto px-4 flex items-center justify-between">
+                <Link href="/" className="font-bold text-xl">
+                    My Info Site
+                </Link>
+                <ul className="flex space-x-4">
+                    <li>
+                        <Link href="/home/index" className="text-gray-700 hover:text-gray-900">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/home/about" className="text-gray-700 hover:text-gray-900">
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#" className="text-gray-700 hover:text-gray-900">
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#" className="text-gray-700 hover:text-gray-900">
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    );
+}
+
