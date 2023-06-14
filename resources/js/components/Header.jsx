@@ -9,12 +9,12 @@ export const Header = () => {
                 </Link>
                 <ul className="flex space-x-4">
                     <li>
-                        <Link href="/home/index" className="text-gray-700 hover:text-gray-900">
+                        <Link href={route('fuga.home.index')} className="text-gray-700 hover:text-gray-900">
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/home/about" className="text-gray-700 hover:text-gray-900">
+                        <Link href={route('fuga.home.about')} className="text-gray-700 hover:text-gray-900">
                             About
                         </Link>
                     </li>
