@@ -7,11 +7,18 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class UsersController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/Index', [
+        return Inertia::render('Home/Index', [
+            'users' => User::all(),
+        ]);
+    }
+
+    public function about()
+    {
+        return Inertia::render('Home/About', [
             'users' => User::all(),
         ]);
     }
