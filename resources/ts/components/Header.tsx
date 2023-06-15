@@ -2,7 +2,7 @@ import { Link } from '@inertiajs/react';
 import React from 'react';
 import route from 'ziggy-js';
 
-export const Header = () => {
+function Header(): React.JSX.Element {
   return (
     <header className="py-4 bg-white shadow">
       <nav className="container mx-auto px-4 flex items-center justify-between">
@@ -40,4 +40,6 @@ export const Header = () => {
       </nav>
     </header>
   );
-};
+}
+
+export default Header;

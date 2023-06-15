@@ -1,26 +1,26 @@
 import React from 'react';
 
-type ItemProps = {
+interface ItemProps {
   image: string;
-};
+}
 
-const PickUpItem = ({ image }: ItemProps) => {
+function PickUpItem({ image }: ItemProps): React.JSX.Element {
   return (
     <div className="w-full h-full">
       <img src={image} alt="" className="object-cover w-full h-full rounded" />
     </div>
   );
-};
+}
 
-type itemObj = {
+interface ItemObj {
   image: string;
-};
-type SectionProps = {
+}
+interface SectionProps {
   title: string;
-  items: itemObj[];
-};
+  items: ItemObj[];
+}
 
-export const PickUpSection = ({ title, items }: SectionProps) => {
+function PickUpSection({ title, items }: SectionProps): React.JSX.Element {
   return (
     <div className="w-1/2 p-4">
       <h1 className="text-2xl font-bold mb-4">{title}</h1>
@@ -31,4 +31,6 @@ export const PickUpSection = ({ title, items }: SectionProps) => {
       </div>
     </div>
   );
-};
+}
+
+export default PickUpSection;

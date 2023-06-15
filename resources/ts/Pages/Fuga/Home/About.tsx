@@ -1,16 +1,17 @@
 import React from 'react';
-import { PickUpSection } from '../../../components/PickUpSection';
-import { Header } from '../../../components/Header';
+import PickUpSection from '../../../components/PickUpSection';
+import Header from '../../../components/Header';
 
-export default function ({ users }) {
+export default function About({ users }): React.JSX.Element {
   users.map((user) => {
     console.log(user);
+    return user;
   });
 
-  type itemObj = {
+  interface ItemObj {
     image: string;
-  };
-  let pickUpTopics: itemObj[] = [];
+  }
+  const pickUpTopics: ItemObj[] = [];
   for (let i = 0; i < 15; i++) {
     pickUpTopics.push({
       image:
